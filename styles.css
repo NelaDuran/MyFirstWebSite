@@ -1,16 +1,16 @@
-/* Estilos generales */
 body,
 html {
     margin: 0;
     padding: 0;
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
-    /* Asegura que el body ocupe toda la altura de la pantalla */
 }
-.container_father{
+
+.container_father {
     display: flex;
     flex-direction: column;
 }
+
 .barra-nav {
     background-color: rgb(81, 31, 146);
     color: white;
@@ -78,12 +78,13 @@ html {
     background-image: url('./img/proywcto2.jpg');
     background-size: cover;
     background-position: center;
-    color: rgb(250, 246, 252);;
+    color: rgb(250, 246, 252);
+    ;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
-button{
+button {
     padding: 10px;
     background-color: rgb(81, 31, 146);
     border-radius: 5px;
@@ -96,8 +97,6 @@ button{
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
-        /* Una sola columna */
         grid-template-rows: auto;
-        /* Las filas se ajustan al contenido */
     }
 }
