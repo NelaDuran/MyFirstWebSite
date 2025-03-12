@@ -31,9 +31,6 @@ html {
 }
 
 .seccion {
-    width: 100%;
-    /* Cada sección ocupa el 100% del ancho del contenedor */
-    min-height: 100vh;
     /* Cada sección ocupa el 100% de la altura de la pantalla */
     padding: 20px;
     /* Espaciado interno */
