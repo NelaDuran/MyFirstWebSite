@@ -21,7 +21,6 @@ html {
 .container {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-template-rows: 50% 50%;
     min-height: 100vh;
     background-color: #f0f0f0;
     gap: 5px;
@@ -51,7 +50,7 @@ html {
 .seccion-2 {
     place-items: center;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: con;
     background-image: url('./img/defirock.jpg');
     background-size: cover;
     background-position: center;
@@ -66,10 +65,9 @@ html {
     background-image: url('./img/netlifynew.jpg');
     background-size: cover;
     background-position: center;
-    color: rgb(235 255 243);
+    color: rgb(8, 8, 8);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 
 .seccion-4 {
     place-items: center;
@@ -78,8 +76,17 @@ html {
     background-image: url('./img/proywcto2.jpg');
     background-size: cover;
     background-position: center;
-    color: rgb(250, 246, 252);
-    ;
+    color: brown;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.seccion-5 {
+    place-items: center;
+    border-radius: 5px;
+    object-fit: cover;
+    background-image: url('./img/paisaje2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(235 255 243);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
