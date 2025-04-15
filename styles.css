@@ -90,6 +90,17 @@ html {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.seccion-6 {
+    place-items: center;
+    border-radius: 5px;
+    object-fit: cover;
+    background-image: url('./img/portada.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(235 255 243);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 button {
     padding: 10px;
