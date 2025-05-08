@@ -20,6 +20,7 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 15px 5%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     position: fixed;
@@ -49,6 +50,7 @@ body {
 .nav-links, .nav-user {
     display: flex;
     list-style: none;
+    display: none;
     gap: 25px;
     order: 4;
     width: 100%;
@@ -99,18 +101,18 @@ body {
 
 /* ===== BANNER ===== */
 .banner {
-    height: 65vh;
-    min-height: 500px;
-    max-height: 800px;
+    height: 500px;
     display: flex;
+    object-fit: contain;
     justify-content: center;
     align-items: center;
+    color: rgb(12, 12, 12);
+    clip-path: ellipse(100% 100% at 50% 0%);
     background-image: url("img/portada.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    margin-top: 70px;
     position: relative;
-    clip-path: ellipse(100% 100% at 50% 0%);
 }
 
 .banner::after {
@@ -316,7 +318,7 @@ body {
 .circle-icon {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 228px;
     background: white;
     width: 42px;
     height: 42px;
@@ -408,8 +410,9 @@ body {
 .grid-size {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    margin-top: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .grid-size div {
@@ -563,6 +566,10 @@ footer > div:last-child {
     gap: 15px;
 }
 
+.nav-links.show, .nav-user.show {
+    display: flex;
+}
+
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 1200px) {
     .grid-products {
@@ -602,17 +609,6 @@ footer > div:last-child {
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
-    }
-    
-    .nav-links, .nav-user {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px 0;
-    }
-    
-    .nav-links.show, .nav-user.show {
-        display: flex;
     }
     
     .constructor {

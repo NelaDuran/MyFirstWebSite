@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="navbar">
-            <span class="material-symbols-outlined">menu</span>
+            <span class="material-symbols-outlined menu-icon">menu</span>
             <div class="constructor">Constructor </div>
             <ul class="nav-links">
                 <li><a href="#">Women</a></li>
@@ -388,7 +388,72 @@ keyboard_arrow_up
             <span></span></div>
         </div>
     </footer>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú hamburguesa
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+            const navUser = document.querySelector('.nav-user');
+            
+            
+            if(menuIcon) {
+                menuIcon.addEventListener('click', function() {
+                    const isShowing = navLinks.classList.contains('show');
+
+                    if(isShowing){
+                        navLinks.classList.remove('show');
+                        navUser.classList.remove('show');
+                    }else{
+                        navLinks.classList.toggle('show');
+                        navUser.classList.toggle('show');
+                    }
+                });
+            }
+            
+            // Acordeón para filtros
+            const filterTitles = document.querySelectorAll('.title-setting-menu');
+            filterTitles.forEach(title => {
+                title.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.material-symbols-outlined');
+                    
+                    // Alternar visibilidad
+                    if(content.style.display === 'none') {
+                        content.style.display = 'block';
+                        icon.textContent = 'keyboard_arrow_up';
+                    } else {
+                        content.style.display = 'none';
+                        icon.textContent = 'keyboard_arrow_down';
+                    }
+                });
+            });
+            
+            // Inicializar filtros (ocultos en móviles)
+            if(window.innerWidth <= 768) {
+                document.querySelectorAll('.title-setting-menu').forEach(title => {
+                    const content = title.nextElementSibling;
+                    const icon = title.querySelector('.material-symbols-outlined');
+                    content.style.display = 'none';
+                    icon.textContent = 'keyboard_arrow_down';
+                });
+            }
+        });
+        
+        // Manejar cambios de tamaño de pantalla
+        window.addEventListener('resize', function() {
+            if(window.innerWidth > 768) {
+                document.querySelectorAll('.title-setting-menu').forEach(title => {
+                    const content = title.nextElementSibling;
+                    const icon = title.querySelector('.material-symbols-outlined');
+                    content.style.display = 'block';
+                    icon.textContent = 'keyboard_arrow_up';
+                });
+                
+                document.querySelector('.nav-links').style.display = 'flex';
+                document.querySelector('.nav-user').style.display = 'flex';
+            }
+        });
+    </script>
 </body>
 
 
