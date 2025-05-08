@@ -274,7 +274,7 @@ body {
     flex: 1;
     height: 1px;
     background: #eee;
-    margin: 0 15px;
+    margin: 0 12px;
 }
 
 .grid-products {
@@ -508,7 +508,7 @@ body {
     margin-left: 8px;
 }
 
-/* ===== FOOTER ===== */
+/* _____ FOOTER ________ */
 footer {
     background: white;
     padding: 50px 5% 30px;
@@ -525,9 +525,24 @@ footer {
 }
 
 .info {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-final{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+}
+
+.ftf-1{
+    display: flex;
+    gap:25px;
+}
+
+.ftf-2{
+    display: flex;
+    gap: 60px;
 }
 
 .text1-footer, .text2-footer {
@@ -543,7 +558,7 @@ footer {
     font-size: 0.95rem;
 }
 
-.text1-footer p:hover, .text2-footer p:hover {
+.text1-footer p:hover, .text2-footer p:hover, .text3-footer p:hover,.text4-footer p:hover {
     color: #5f5aff;
 }
 
@@ -553,11 +568,10 @@ footer h2 {
     font-size: 1.5rem;
 }
 
+
 footer > div:last-child {
     max-width: 1200px;
     margin: 40px auto 0;
-    display: flex;
-    justify-content: space-between;
     padding-top: 20px;
     border-top: 1px solid #eee;
     color: #777;
@@ -570,7 +584,7 @@ footer > div:last-child {
     display: flex;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* _______ RESPONSIVE ADJUSTMENTS ________*/
 @media (max-width: 1200px) {
     .grid-products {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
