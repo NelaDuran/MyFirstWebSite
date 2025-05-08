@@ -76,7 +76,7 @@ html {
     background-image: url('./img/proywcto2.jpg');
     background-size: cover;
     background-position: center;
-    color: brown;
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .seccion-5 {
@@ -97,7 +97,7 @@ html {
     background-image: url('./img/portada.jpg');
     background-size: cover;
     background-position: center;
-    color: rgb(235 255 243);
+    color: rgb(9, 109, 250);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
