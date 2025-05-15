@@ -17,21 +17,19 @@ body {
 
 /* ===== NAVBAR ===== */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 15px 5%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+     background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 1000;
-    justify-content: space-between;
-    transition: all 0.3s ease;
+    border-bottom: 1px solid;
+    border-color: white;
 }
 
 .menu-icon {
-    display: none;
     color: white;
     font-size: 28px;
     cursor: pointer;
@@ -39,23 +37,28 @@ body {
 }
 
 .constructor {
+    display: flex;
+    flex-direction: row;
+    order:1;
+}
+
+.constructor-text{
     font-size: 1.5rem;
     color: white;
     font-weight: bold;
     margin-right: auto;
     padding-left: 15px;
-    order: 2;
+    order: 1;
 }
 
 .nav-links, .nav-user {
     display: flex;
     list-style: none;
-    display: none;
     gap: 25px;
-    order: 4;
     width: 100%;
     justify-content: center;
     padding: 15px 0;
+    order: 2;
 }
 
 .nav-links a, .nav-user a {
@@ -79,8 +82,8 @@ body {
     border-radius: 25px;
     padding: 8px 15px;
     margin: 10px 0;
-    order: 3;
     width: 100%;
+    order: 3;
     max-width: 500px;
     transition: all 0.3s ease;
 }
@@ -344,6 +347,12 @@ body {
     align-items: center;
 }
 
+.product-name span{
+    color: #333;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 17px;
+}
 .value-product span:first-child {
     color: #333;
     font-weight: 500;
@@ -351,7 +360,7 @@ body {
 }
 
 .value-product span:last-child {
-    color: #5f5aff;
+    color: #1b1a2e;
     font-weight: 600;
     font-size: 1.05rem;
 }
@@ -410,7 +419,6 @@ body {
 .grid-size {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    padding: 10px;
     margin-top: 10px;
     margin-right: 10px;
 }
@@ -485,7 +493,6 @@ body {
 .checkmark:after {
     content: "";
     position: absolute;
-    display: none;
 }
 
 .container-checkbox input:checked ~ .checkmark:after {
@@ -509,6 +516,7 @@ body {
 }
 
 /* ===== FOOTER ===== */
+/* _____ FOOTER ________ */
 footer {
     background: white;
     padding: 50px 5% 30px;
@@ -525,9 +533,24 @@ footer {
 }
 
 .info {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-final{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+}
+
+.ftf-1{
+    display: flex;
+    gap:25px;
+}
+
+.ftf-2{
+    display: flex;
+    gap: 60px;
 }
 
 .text1-footer, .text2-footer {
@@ -543,7 +566,7 @@ footer {
     font-size: 0.95rem;
 }
 
-.text1-footer p:hover, .text2-footer p:hover {
+.text1-footer p:hover, .text2-footer p:hover, .text3-footer p:hover,.text4-footer p:hover {
     color: #5f5aff;
 }
 
@@ -553,11 +576,10 @@ footer h2 {
     font-size: 1.5rem;
 }
 
+
 footer > div:last-child {
     max-width: 1200px;
     margin: 40px auto 0;
-    display: flex;
-    justify-content: space-between;
     padding-top: 20px;
     border-top: 1px solid #eee;
     color: #777;
@@ -569,7 +591,6 @@ footer > div:last-child {
 .nav-links.show, .nav-user.show {
     display: flex;
 }
-
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 1200px) {
     .grid-products {
@@ -617,16 +638,10 @@ footer > div:last-child {
     }
     
     .search-container {
-        order: 3;
         margin: 15px 0;
         max-width: 100%;
     }
     
-    .banner {
-        height: 55vh;
-        min-height: 400px;
-        margin-top: 60px;
-    }
     
     .banner h1 {
         font-size: 2.5rem;
@@ -647,16 +662,11 @@ footer > div:last-child {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     .navbar {
-        padding: 12px 5%;
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .banner {
-        height: 50vh;
-        min-height: 350px;
-        clip-path: none;
-    }
     
     .banner h1 {
         font-size: 2rem;
@@ -692,26 +702,44 @@ footer > div:last-child {
         text-align: center;
     }
 }
-
-/* Animation for dropdown arrows */
-@keyframes rotateDown {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(180deg); }
-}
-
-@keyframes rotateUp {
-    from { transform: rotate(180deg); }
-    to { transform: rotate(0deg); }
-}
-
-.title-setting-menu .material-symbols-outlined {
-    transition: transform 0.3s ease;
-}
-
-.title-setting-menu.collapsed .material-symbols-outlined {
-    animation: rotateDown 0.3s ease forwards;
-}
-
-.title-setting-menu.expanded .material-symbols-outlined {
-    animation: rotateUp 0.3s ease forwards;
+@media (max-width: 300px) {
+    .navbar {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    
+    .banner h1 {
+        padding-top: 10px;
+        font-size: 2rem;
+    }
+    
+    .button-show-now {
+        padding: 14px 30px;
+        font-size: 0.95rem;
+    }
+    
+    .grid-products {
+        grid-template-columns: 1fr;
+    }
+    
+    .submenu-one, .submenu-two, 
+    .submenu-three, .submenu-four, 
+    .submenu-six {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Color grid mobile adjustment */
+    .grid-colors {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid-size {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    footer > div:last-child {
+        flex-direction: column;
+        text-align: center;
+    }
 }
