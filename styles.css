@@ -97,7 +97,6 @@ html {
     background-image: url('./img/portada.jpg');
     background-size: cover;
     background-position: center;
-    color: rgb(235 255 243);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
