@@ -1,0 +1,129 @@
+*{
+    box-sizing: content-box;
+    margin: 0;
+}
+.encabezado-ppal{
+    display: flex;
+    justify-content:space-between;
+    padding-right: 18px;
+    padding-left: 18px;
+    background-color: rgb(19, 7, 26);
+}
+html{
+    background-image: url(https://i.gifer.com/2iiH.gif);
+    background-color: rgb(0, 0, 0);
+}
+
+.img{
+    height: 100px;
+    object-fit: cover;
+}
+#img-pokeball{
+    display: flex;
+    justify-content: end;
+}
+#img-poke{
+    display: flex;
+    justify-content: center;
+}
+
+.tipos{
+    display: flex;
+    flex-direction: row;
+}
+
+.second-contain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.title-img{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+        border-radius: 15px;
+}
+.name-level-type{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Estilos para el meter */
+meter {
+    width: 300px;
+    height: 25px;
+    margin: 5px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+/* Webkit (Chrome, Safari, etc.) */
+meter::-webkit-meter-bar {
+    background: #f3f3f3;
+    border-radius: 5px;
+    border: none;
+}
+
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+    background: #3498db;
+    border-radius: 5px;
+}
+
+/* Firefox */
+meter::-moz-meter-bar {
+    background: #3498db;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Contenedor de estadísticas */
+#stats-container {
+    padding: 20px;
+}
+
+.stat-row {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.stat-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-value {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.height-weight{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+span{
+    color: white;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    padding: 10px;
+}
