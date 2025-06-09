@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokecard</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,23 +28,28 @@
 
     <section class="second-contain">
         <div class="title-img" id="content-img">
+            <br>
+            <br>
+            <br>
             <h1 id="titulo" class="title"></h1>
             <img src="" id="pok" alt="">
             <div class="height-weight">
                 <span id="height"></span>
                 <span id="weight"></span>
             </div>
+
+        </div>
+        <div id="stats-container">
+
             <div class="name-level-type">
+                <div id="stats"></div>
                 <div class="number"></div>
                 <div class="type">Tipos del pokemon</div>
                 <div id="types"></div>
                 <div class="weakness">Debilidades</div>
                 <div id="debilities"></div>
+                
             </div>
-        </div>
-
-        <div class="stadistics">
-            <div id="stats-container"></div>
         </div>
     </section>
 
@@ -109,7 +117,7 @@
             } else {
                 elemento.style.background = `linear-gradient(${colors[0]}, ${colors[1]})`;
             }
-            const statsContainer = document.getElementById('stats-container');
+            const statsContainer = document.getElementById('stats');
             res.data.stats.forEach(stat => {
                 const statValue = stat.base_stat;
                 console.log(stat)
@@ -131,13 +139,18 @@
                         high="${maxValue * 0.7}"
                         optimum="${maxValue * 0.8}"
                         title="${statValue} de ${maxValue}"
+                        
                         >
                         ${statValue}/${maxValue}
                         </meter>
                     `;
                 statsContainer.appendChild(statElement);
             });
-        })
+            // let stat=document.getElementById("stat")
+            // stat.style.webkitMeterValue= colors[0]
+
+            console.log(colors);
+    })
 
 
         function getColorsByType(type) {
@@ -166,6 +179,8 @@
             };
             return colors[type] || '#000'; // Si no existe, devuelve negro
         }
+        
+        
     </script>
 </body>
 
