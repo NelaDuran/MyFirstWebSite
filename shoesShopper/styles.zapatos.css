@@ -17,7 +17,7 @@ body {
 
 /* ===== NAVBAR ===== */
 .navbar {
-     background-color: transparent;
+    background-color: transparent;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
@@ -660,6 +660,20 @@ footer > div:last-child {
     .grid-colors {
         grid-template-columns: repeat(4, 1fr);
     }
+}
+
+@media(max-width:400px){
+.navbar{
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+.info{
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+.footer-final{
+    grid-template-columns: 1fr 1fr;
+}
 }
 
 @media (max-width: 600px) {
