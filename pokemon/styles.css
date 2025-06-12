@@ -42,6 +42,7 @@ html {
 .second-contain {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -50,6 +51,13 @@ html {
     flex-direction: column;
     margin: 10px;
     border-radius: 15px;
+}
+
+#debilities{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
 }
 
 .name-level-type {
@@ -144,4 +152,27 @@ span {
 
 button {
     font-size: 1rem;
+}
+
+@media (max-width:600px) {
+    .img{
+        height: 50px;
+    }
+    .title-img{
+        width: 400px;
+    }
+}
+
+@media (max-width:424px) {
+    .title-img{
+        width: 300px;
+    }
+
+    .height-weight{
+        padding: 40px 10px;
+    }
+
+    #stats-container{
+        padding: 0;
+    }
 }
