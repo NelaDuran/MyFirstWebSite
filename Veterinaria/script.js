@@ -41,7 +41,6 @@ function guardar() {
             estado: document.getElementById("estado").value
         };
 
-
         if (op === 0) {
             dataArray.push(datos);
         } else {
@@ -49,11 +48,22 @@ function guardar() {
             op = 0;
         }
 
-
         saveData();
         pintar();
         limpiar();
-        cerrarModal('exampleModal'); // Cerrar el modal después de guardar
+
+        // Cierra el modal correctamente con Bootstrap 5
+        const modalEl = document.getElementById('exampleModal');
+        const modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide();
+
+        // Confirmación visual
+        Swal.fire({
+            title: 'Cita guardada',
+            icon: 'success',
+            timer: 1500,
+            showConfirmButton: false
+        });
     }
 }
 

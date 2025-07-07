@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    >
+    
 
 </head>
 
@@ -66,22 +66,42 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <div style="display: flex; flex-direction: column; gap: 20px; padding: 10px;">
+                        <div class="row g-3" style="padding: 10px;">
                             <input type="text" id="numero" placeholder="Aqui el codigo de su cita" disabled>
-                            <label for="nombre">Nombre de la mascota</label>
-                            <input type="text" id="nombre" placeholder="Pet" required>
-                            <label for="nombred">Nombre del propietario</label>
-                            <input type="text" id="nombred" placeholder="Nombre del amo" required>
-                            <label for="telefono">Teléfono</label>
-                            <input type="number" id="telefono" placeholder="Teléfono" required pattern="\d+"
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label">Nombre de la mascotta</label>
+                                <input type="text"  placeholder="Pet" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="col-md-6">
+                            <label for="nombred" class="form-label">Nombre propietario</label>
+                            <input type="text" class="form-control" placeholder="Nombre del amo" id="nombred"  required>
+                        </div>
+                            
+                        <div class="col-md-6">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">+57</span>
+                                <input type="number" class="form-control" placeholder="Teléfono" id="telefono"
+                                    required pattern="\d+"
                                 title="Digite solo números">
-                            <label for="fecha">Fecha de la cita</label>
-                            <input type="date" id="fecha" required>
-                            <label for="hora">Hora de la cita</label>
-                            <input type="time" id="hora" required>
+                            </div>
+                        </div>
 
-                            <label for="tipo">Tipo de mascota</label>
-                            <select id="tipo" required>
+                        <div class="col-md-6">
+                            <label for="fecha" class="form-label">Fecha cita</label>
+                            <input type="date" class="form-control" id="fecha" required>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="hora" class="form-label">Hora cita</label>
+                            <input type="time" class="form-control" id="hora" required>
+                            
+                        </div>
+                            
+                        <div class="col-md-6">
+                            <label for="tipo" class="form-label">Tipo de mascota</label>
+                            <select class="form-select" id="tipo" required>
+                                <option selected disabled value=""></option>
                                 <option>Gato</option>
                                 <option>Perro</option>
                                 <option>Araña</option>
@@ -93,16 +113,29 @@
                                 <option>Loro</option>
                                 <option>Tortuga</option>
                             </select>
+                            <div class="invalid-feedback">
+                                😭
+                            </div>
+                        </div>
 
-                            <label for="sintomas">Síntomas</label>
-                            <textarea id="sintomas" placeholder="no come,vomita etc..." maxlength="400" required></textarea>
 
-                            <label for="estado">Estado de la cita</label>
+                        <div class="col-md-12">
+                            <label for="sintomas" class="form-label">Sintomas</label>
+                            <textarea name="symptoms" id="sintomas" maxlength="400" class="form-control h-50"  required></textarea>
+                            
+                            
+                        </div>
+                        <div class="col-md-12">
+                            <label for="estado" class="form-label">Estado de la cita</label>
                             <select id="estado" class="form-select" required>
                                 <option value="Abierta">Abierta</option>
                                 <option value="Terminada">Terminada</option>
                                 <option value="Anulada">Anulada</option>
                             </select>
+                        </div>
+
+
+                            
                         </div>
                     </div>
                     <div class="modal-footer">
