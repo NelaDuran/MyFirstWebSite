@@ -108,7 +108,15 @@ html {
     background-position: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
+.seccion-8 {
+    place-items: center;
+    border-radius: 5px;
+    object-fit: cover;
+    background-image: url('./img/veterinaria.jpg');
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 button {
     padding: 10px;
     background-color: rgb(81, 31, 146);
