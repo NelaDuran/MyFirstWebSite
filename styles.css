@@ -126,6 +126,15 @@ html {
     background-position: center;
     text-shadow: 2px 2px 4px rgba(0, 16, 105, 0.5);
 }
+.seccion-10{
+    place-items: center;
+    border-radius: 5px;
+    object-fit: contain;
+    background-image: url('./img/trevol-suerte.jpg');
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0, 16, 105, 0.5);
+}
 button {
     padding: 10px;
     background-color: rgb(81, 31, 146);
@@ -134,7 +143,6 @@ button {
     color: white;
     cursor: pointer;
 }
-
 
 @media (max-width: 768px) {
     .container {
