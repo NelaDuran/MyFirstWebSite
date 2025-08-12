@@ -134,6 +134,7 @@ html {
     background-size: cover;
     background-position: center;
     text-shadow: 2px 2px 4px rgba(0, 16, 105, 0.5);
+    color:white;
 }
 button {
     padding: 10px;
